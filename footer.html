@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+      }
+
+      #inner {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: auto;
+      }
+
+      .des {
+        width: 33%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 30px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 60px;
+      }
+
+      #social,
+      #copy {
+        text-align: center;
+        color: #7d7d7d;
+      }
+
+      p,
+      a {
+        color: #7d7d7d;
+        text-decoration-line: none;
+      }
+
+      p {
+        margin: 8px;
+      }
+
+      #social > a {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="inner">
+        <div class="des">
+          <h3>INFORMATION</h3>
+          <a href=""><p>About Us</p></a>
+          <a href=""><p>Associated Brands</p></a>
+          <a href=""><p>FAQ</p></a>
+          <a href=""><p>Collaborate with Fab Bag</p></a>
+          <a href=""><p>Contact Us</p></a>
+          <a href=""><p>Returns & Refunds</p></a>
+          <a href=""><p>Terms & Conditions</p></a>
+          <a href=""><p>Privacy Policy</p></a>
+        </div>
+        <div class="des">
+          <h3>CUSTOMER CARE</h3>
+          <p>
+            Call : 022-6805-6010
+            <br />
+            (Monday to Friday : 9 AM - 7 PM).
+          </p>
+          <p>Mail : crew@fabbag.com</p>
+        </div>
+        <div class="des">
+          <h3>NEWSLETTER</h3>
+          <p>Signup for the latest offers, updates and news</p>
+          <br />
+          <div>
+            <input
+              style="height: 25px"
+              type="text"
+              placeholder="Your email address"
+            />
+            <a href=""
+              ><button
+                style="
+                  background-color: orange;
+                  color: white;
+                  height: 30px;
+                  border-radius: 8px;
+                  cursor: pointer;
+                  border: none;
+                "
+              >
+                SUBSCRIBE
+              </button></a
+            >
+          </div>
+          <br />
+          <p>Don’t worry we don’t spam</p>
+        </div>
+      </div>
+
+      <div id="social">
+        <a href="http://facebook.com/fabbag" target="_blank"
+          ><i
+            style="color: #7d7d7d; width: 2%"
+            class="fa-brands fa-facebook"
+          ></i
+        ></a>
+        <a href="https://twitter.com/thefabbag" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com/thefabbag/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/fabbag" target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+      <div id="copy">
+        <p>Copyright © 2021 fabbag.com All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>
