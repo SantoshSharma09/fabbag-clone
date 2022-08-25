@@ -5,12 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+        margin: auto;
+        /* border: 1px solid red; */
+        width: 85%;
+        justify-content: space-evenly;
+        margin-top: 50px;
+      }
+      #inner {
+        width: 65%;
+        /* border: 1px solid orange; */
+        display: grid;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        border-radius: 0px 0px 8px 8px;
+      }
+      #me {
+        width: 100%;
+        /* border: 1px solid green; */
+        display: flex;
+        margin: auto;
+        margin-bottom: 35px;
+        justify-content: space-between;
+        height: 50px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        border-radius: 0px 0px 8px 8px;
+        padding-top: 10px;
+      }
+      #sub {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        padding-bottom: 30px;
+      }
+      #qt {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        padding-right: 30px;
+      }
+      #second {
+        width: 30%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 0px;
+        height: 200px;
+        background-color: #f7f7f7;
+      }
+    </style>
   </head>
   <body>
-    <h2>My Cart</h2>
-    <div>
-      <div style="width: 60%; border: 1px solid black"></div>
-      <div style="width: 35%; border: 1px solid black"></div>
+    <h2 style="padding-left: 130px; margin-top: 100px; font-size: 35px">
+      My Cart
+    </h2>
+    <div id="container">
+      <div id="inner">
+        <div id="me" style="font-size: 17px; padding-left: 10px">
+          <div style="padding-left: 10px">PRODUCT</div>
+          <div id="qt" style="display: flex; font-size: 17px">
+            <div>QTY</div>
+            <div>PRICE</div>
+          </div>
+        </div>
+        <div id="sub">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0052/7551/6995/products/Women_sPage-Skincare-Reveal-3opt_compact.gif?v=1661148586"
+            alt=""
+          />
+          <p style="font-size: 18px">The Own 8 All August Fab Bag</p>
+          <div
+            style="
+              display: flex;
+              border: 1px solid #7d7d7d;
+              width: 9%;
+              align-items: center;
+              justify-content: center;
+              font-size: 20px;
+              height: 35px;
+            "
+          >
+            1
+          </div>
+          <p style="font-size: 20px">Rs. 599.00</p>
+        </div>
+      </div>
+      <div id="second">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            align-items: center;
+            margin-bottom: 10px;
+          "
+        >
+          <div style="font-size: 20px">TOTAL PRICE :</div>
+          <div style="font-size: 20px">Rs. 599.00</div>
+        </div>
+        <button
+          style="
+            width: 100%;
+            height: 45px;
+            margin-bottom: 25px;
+            font-size: 16px;
+            background-color: black;
+            color: aliceblue;
+            border: none;
+            border-radius: 5px;
+          "
+        >
+          UPDATE CART
+        </button>
+        <br />
+        <button
+          style="
+            width: 100%;
+            height: 45px;
+            font-size: 16px;
+            color: white;
+            background-color: #e5b95f;
+            border: none;
+            border-radius: 5px;
+          "
+        >
+          CHECK OUT
+        </button>
+      </div>
     </div>
   </body>
 </html>
