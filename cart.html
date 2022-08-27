@@ -4,8 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MY CART</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
+      * {
+        margin: 0px;
+      }
+
+      #navbar {
+        width: 95%;
+        height: 60px;
+        display: flex;
+        margin: auto;
+        position: sticky;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px 8px 40px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background-color: whitesmoke;
+      }
+
+      #icons {
+        display: flex;
+        justify-content: space-around;
+        width: 15%;
+        height: 100%;
+        margin-right: 20px;
+      }
+
+      #icons > div {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        padding-top: 10px;
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
       #container {
         display: flex;
         margin: auto;
@@ -14,7 +56,7 @@
         justify-content: space-evenly;
         margin-top: 50px;
       }
-      #inner {
+      #cart {
         width: 65%;
         /* border: 1px solid orange; */
         display: grid;
@@ -58,14 +100,97 @@
         height: 200px;
         background-color: #f7f7f7;
       }
+
+      #footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        margin-top: 110px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-top: 80px;
+      }
+
+      #inner {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: auto;
+      }
+
+      .des {
+        width: 33%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 30px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 60px;
+      }
+
+      #social,
+      #copy {
+        text-align: center;
+        color: #7d7d7d;
+      }
+
+      p,
+      a {
+        color: #7d7d7d;
+        text-decoration-line: none;
+      }
+
+      p {
+        margin: 8px;
+      }
+
+      #social > a {
+        margin: 10px;
+      }
     </style>
   </head>
   <body>
-    <h2 style="padding-left: 130px; margin-top: 100px; font-size: 35px">
+    <div id="navbar">
+      <a style="text-decoration-line: none" href="subscribe.html"
+        ><h1 style="color: orange; font-size: 15px">SUBSCRIBE NOW</h1></a
+      >
+
+      <div style="width: 15.5%">
+        <a style="text-decoration-line: none" href="index.html"
+          ><img
+            style="width: 100%"
+            src="https://cdn.shopify.com/s/files/1/0052/7551/6995/files/FABBAG-LOGO-Printing1_6350cdb4-8c03-49a8-bd2e-c8df50c83b37_2048x.png?v=1660282958"
+            alt=""
+        /></a>
+      </div>
+      <div id="icons">
+        <div>
+          <a style="color: orange" href="">
+            <i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+        </div>
+        <div>
+          <a style="color: orange" href=""
+            ><i class="fa-regular fa-heart"></i
+          ></a>
+        </div>
+        <div>
+          <a style="color: orange" href=""
+            ><i class="fa-solid fa-circle-user"></i
+          ></a>
+        </div>
+        <div>
+          <a style="color: orange" href=""
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <h2 style="padding-left: 130px; margin-top: 80px; font-size: 35px">
       My Cart
     </h2>
     <div id="container">
-      <div id="inner">
+      <div id="cart">
         <div id="me" style="font-size: 17px; padding-left: 10px">
           <div style="padding-left: 10px">PRODUCT</div>
           <div id="qt" style="display: flex; font-size: 17px">
@@ -138,5 +263,99 @@
         </button>
       </div>
     </div>
+    <div id="footer">
+      <div id="inner">
+        <div class="des">
+          <h3>INFORMATION</h3>
+          <a href="about.html"><p>About Us</p></a>
+          <a href=""><p>Associated Brands</p></a>
+          <a href=""><p>FAQ</p></a>
+          <a href=""><p>Collaborate with Fab Bag</p></a>
+          <a href=""><p>Contact Us</p></a>
+          <a href=""><p>Returns & Refunds</p></a>
+          <a href=""><p>Terms & Conditions</p></a>
+          <a href=""><p>Privacy Policy</p></a>
+        </div>
+        <div class="des">
+          <h3>CUSTOMER CARE</h3>
+          <p>
+            Call : 022-6805-6010
+            <br />
+            (Monday to Friday : 9 AM - 7 PM).
+          </p>
+          <p>Mail : crew@fabbag.com</p>
+        </div>
+        <div class="des">
+          <h3>NEWSLETTER</h3>
+          <p>Signup for the latest offers, updates and news</p>
+          <br />
+          <div>
+            <input
+              style="height: 25px"
+              type="text"
+              placeholder="Your email address"
+            />
+            <a href=""
+              ><button
+                style="
+                  background-color: orange;
+                  color: white;
+                  height: 30px;
+                  border-radius: 8px;
+                  cursor: pointer;
+                  border: none;
+                "
+              >
+                SUBSCRIBE
+              </button></a
+            >
+          </div>
+          <br />
+          <p>Don’t worry we don’t spam</p>
+        </div>
+      </div>
+
+      <div id="social">
+        <a href="http://facebook.com/fabbag" target="_blank"
+          ><i
+            style="color: #7d7d7d; width: 2%"
+            class="fa-brands fa-facebook"
+          ></i
+        ></a>
+        <a href="https://twitter.com/thefabbag" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com/thefabbag/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/fabbag" target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+      <div id="copy">
+        <p>Copyright © 2021 fabbag.com All rights reserved</p>
+      </div>
+    </div>
   </body>
 </html>
+
+<script>
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  // Get the navbar
+  var navbar = document.getElementById("navbar");
+
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>

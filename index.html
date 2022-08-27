@@ -19,11 +19,12 @@
         height: 60px;
         display: flex;
         margin: auto;
-        position: relative;
+        position: sticky;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px 8px 40px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background-color: whitesmoke;
       }
 
       #icons {
@@ -31,6 +32,7 @@
         justify-content: space-around;
         width: 15%;
         height: 100%;
+        margin-right: 20px;
       }
 
       #icons > div {
@@ -41,11 +43,16 @@
         width: 20%;
         padding-top: 0px;
       }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
       #footer {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding-top: 80px;
       }
 
@@ -116,7 +123,7 @@
   </head>
   <body>
     <div id="navbar">
-      <a style="text-decoration-line: none" href=""
+      <a style="text-decoration-line: none" href="cart.html" target="_blank"
         ><h1 style="color: #e5b95f; font-size: 18px">SUBSCRIBE NOW</h1></a
       >
 
@@ -489,7 +496,7 @@
       <div id="inner">
         <div class="des">
           <h3>INFORMATION</h3>
-          <a href=""><p>About Us</p></a>
+          <a href="about.html" target="_blank"><p>About Us</p></a>
           <a href=""><p>Associated Brands</p></a>
           <a href=""><p>FAQ</p></a>
           <a href=""><p>Collaborate with Fab Bag</p></a>
@@ -560,3 +567,24 @@
     </div>
   </body>
 </html>
+
+<script>
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  // Get the navbar
+  var navbar = document.getElementById("navbar");
+
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
+
+  // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>
