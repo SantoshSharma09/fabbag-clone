@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      img {
+        display: flex;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 30px;
+      }
+      #conatiner {
+        width: 33%;
+        display: flex;
+        margin: auto;
+        padding-bottom: 10px;
+        margin-top: 40px;
+        /* padding-right: 40px; */
+        /* border: 1px solid black; */
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+      }
+      form {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: (1, 1fr);
+        grid-template-rows: auto;
+        gap: 5px;
+      }
+      h2,
+      p {
+        text-align: center;
+      }
+      form input {
+        height: 25px;
+        /* border-radius: 8px; */
+        font-size: 20px;
+      }
+      label {
+        font-size: 15px;
+        color: #7a7a7a;
+        margin: none;
+      }
+      #or {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      button {
+        height: 35px;
+        /* border-radius: 8px; */
+        font-size: 15px;
+        background-color: #e5b95f;
+        border: none;
+        color: #2c2727;
+      }
+      #social_login_frame {
+        width: 100%;
+        /* padding-top: 0px; */
+        margin-bottom: 5px;
+        border: 0px;
+        height: 96px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="font-family: 'Times New Roman', Times, serif">
+      Create An Account
+    </h2>
+
+    <div id="conatiner">
+      <form>
+        <iframe
+          id="social_login_frame"
+          title="Social Login Frame"
+          src="https://social-login.oxiapps.com/widget?site=fabbag-dev.myshopify.com&amp;vt=928360&amp;parenturl=https://www.fabbag.com/account/register"
+        ></iframe>
+        <label for="">First Name<span style="color: red">*</span></label>
+        <input type="text" id="name" />
+        <br />
+        <label for="">Last Name<span style="color: red">*</span></label>
+        <input type="text" id="name" />
+        <br />
+        <label for="">Email<span style="color: red">*</span></label>
+        <input type="text" id="email" />
+        <br />
+        <label for=""> Your Password<span style="color: red">*</span></label>
+        <input type="text" id="password" " />
+        <br />
+        <button type="submit">Create an Accout</button>
+        <div id="or">
+          <hr style="width: 50%; text-align: left; margin-left: 0" />
+          <span styel="margin-left:5px;">OR</span>
+          <hr style="width: 50%; text-align: left; margin-left: 0" />
+        </div>
+        <button type="submit">Sign In</button>
+
+        <p></p>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!-- <script>
+  document.querySelector("form").addEventListener("submit", signup);
+
+  function signup() {
+    event.preventDefault();
+    let x = document.querySelector("#name").value;
+    localStorage.setItem("username", x);
+
+    let y = document.querySelector("#email").value;
+    localStorage.setItem("email", y);
+
+    let z = document.querySelector("#password").value;
+    localStorage.setItem("password", z);
+  }
+</script> -->
+
+<div id="social">
+  <a href="http://facebook.com/fabbag" target="_blank"
+    ><i style="color: #7d7d7d; width: 2%" class="fa-brands fa-facebook"></i
+  ></a>
+  <a href="https://twitter.com/thefabbag" target="_blank"
+    ><i class="fa-brands fa-twitter"></i
+  ></a>
+  <a href="https://instagram.com/thefabbag/" target="_blank"
+    ><i class="fa-brands fa-instagram"></i
+  ></a>
+  <a href="https://www.youtube.com/fabbag" target="_blank"
+    ><i class="fa-brands fa-youtube"></i
+  ></a>
+</div>
+
+<script
+  src="https://kit.fontawesome.com/24c494a6b6.js"
+  crossorigin="anonymous"
+></script>
