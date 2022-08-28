@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign In Page</title>
     <script
       src="https://kit.fontawesome.com/24c494a6b6.js"
       crossorigin="anonymous"
@@ -25,7 +25,6 @@
         padding: 10px 20px 8px 40px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         background-color: whitesmoke;
-        margin-bottom: 120px;
       }
 
       #icons {
@@ -50,7 +49,7 @@
         width: 100%;
       }
 
-      /* //for main body// */
+      /* body :start */
       img {
         display: flex;
         margin: auto;
@@ -75,8 +74,7 @@
         grid-template-rows: auto;
         gap: 5px;
       }
-      h1,
-      p {
+      h1 {
         text-align: center;
       }
       form input {
@@ -117,14 +115,13 @@
         margin-top: 8px;
         margin-bottom: 8px;
       }
-
-      /* //for main body end// */
+      /* body :end */
 
       #footer {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
-        margin-top: 70px;
+        margin-top: 150px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding-top: 80px;
       }
@@ -137,7 +134,7 @@
         margin: auto;
       }
 
-      .info {
+      .des {
         width: 33%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -147,30 +144,30 @@
         padding-left: 60px;
       }
 
-      #socialmedia,
+      #social,
       #copy {
         text-align: center;
         color: #7d7d7d;
       }
 
-      p,
-      a {
+      #footer p,
+      #footer a {
         color: #7d7d7d;
         text-decoration-line: none;
       }
 
-      p {
+      #footer p {
         margin: 8px;
       }
 
-      #socialmedia > a {
+      #social > a {
         margin: 10px;
       }
     </style>
   </head>
   <body>
     <div id="navbar">
-      <a style="text-decoration-line: none" href=""
+      <a style="text-decoration-line: none" href="subscribe.html"
         ><h1 style="color: orange; font-size: 15px">SUBSCRIBE NOW</h1></a
       >
 
@@ -206,8 +203,12 @@
       </div>
     </div>
 
-    <!-- /* //for main body// */ -->
-    <h1 style="font-family: 'Times New Roman', Times, serif">Sign In</h1>
+    <!-- body start -->
+    <h1
+      style="font-family: 'Times New Roman', Times, serif; padding-top: 100px"
+    >
+      Sign In
+    </h1>
     <div id="conatiner">
       <form>
         <iframe
@@ -226,7 +227,9 @@
           <label style="color: #2c2727" for="">Forget Your Password ?</label>
         </div>
 
-        <button type="submit">Sign In</button>
+        <button style="cursor: pointer" type="submit" type="submit">
+          Sign In
+        </button>
 
         <div id="or" style="height: 0px">
           <hr style="width: 50%; text-align: left; margin-left: 0" />
@@ -234,19 +237,41 @@
           <hr style="width: 50%; text-align: left; margin-left: 0" />
         </div>
 
-        <button type="submit">Create an Accout</button>
+        <!-- <a href="signup.html">
+          
+        </a> -->
+        <!-- <button id="signup" style="width: 100%; cursor: pointer">
+          Create An Account
+        </button> -->
+        <a style="text-decoration-line: none" href="signup.html">
+          <div
+            style="
+              width: 100%;
+              cursor: pointer;
+              height: 35px;
+              /* border-radius: 8px; */
+              font-size: 15px;
+              background-color: #e5b95f;
+              border: none;
+              color: #2c2727;
 
-        <p></p>
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            Create An Account
+          </div>
+        </a>
       </form>
     </div>
-
-    <!-- /* //for main body// */ -->
+    <!-- body end -->
 
     <div id="footer">
       <div id="inner">
-        <div class="info">
+        <div class="des">
           <h3>INFORMATION</h3>
-          <a href=""><p>About Us</p></a>
+          <a href="about.html"><p>About Us</p></a>
           <a href=""><p>Associated Brands</p></a>
           <a href=""><p>FAQ</p></a>
           <a href=""><p>Collaborate with Fab Bag</p></a>
@@ -274,7 +299,7 @@
               type="text"
               placeholder="Your email address"
             />
-            <a href=""
+            <a href="subscribePage.html"
               ><button
                 style="
                   background-color: orange;
@@ -294,7 +319,7 @@
         </div>
       </div>
 
-      <div id="socialmedia">
+      <div id="social">
         <a href="http://facebook.com/fabbag" target="_blank"
           ><i
             style="color: #7d7d7d; width: 2%"
@@ -335,6 +360,26 @@
       navbar.classList.add("sticky");
     } else {
       navbar.classList.remove("sticky");
+    }
+  }
+
+  document.querySelector("form").addEventListener("submit", signin);
+
+  let m = localStorage.getItem("username");
+
+  let n = localStorage.getItem("email");
+
+  let o = localStorage.getItem("password");
+
+  function signin() {
+    event.preventDefault();
+    let y = document.querySelector("#email").value;
+
+    let z = document.querySelector("#password").value;
+    if (y !== n || z !== o) {
+      alert("Wrong username or password");
+    } else {
+      location.href = "http://127.0.0.1:5500/cold-throat-6863/index.html";
     }
   }
 </script>

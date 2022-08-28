@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Signup Page</title>
     <script
       src="https://kit.fontawesome.com/24c494a6b6.js"
       crossorigin="anonymous"
@@ -25,7 +25,6 @@
         padding: 10px 20px 8px 40px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         background-color: whitesmoke;
-        margin-bottom: 90px;
       }
 
       #icons {
@@ -50,7 +49,7 @@
         width: 100%;
       }
 
-      /* //for main body// */
+      /* body :start */
       img {
         display: flex;
         margin: auto;
@@ -75,8 +74,7 @@
         grid-template-rows: auto;
         gap: 5px;
       }
-      h1,
-      p {
+      h1 {
         text-align: center;
       }
       form input {
@@ -112,13 +110,13 @@
         height: 96px;
       }
 
-      /* //for main body end// */
+      /* body :end */
 
       #footer {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
-        margin-top: 70px;
+        margin-top: 150px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding-top: 80px;
       }
@@ -131,7 +129,7 @@
         margin: auto;
       }
 
-      .info {
+      .des {
         width: 33%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -141,30 +139,30 @@
         padding-left: 60px;
       }
 
-      #socialmedia,
+      #social,
       #copy {
         text-align: center;
         color: #7d7d7d;
       }
 
-      p,
-      a {
+      #footer p,
+      #footer a {
         color: #7d7d7d;
         text-decoration-line: none;
       }
 
-      p {
+      #footer p {
         margin: 8px;
       }
 
-      #socialmedia > a {
+      #social > a {
         margin: 10px;
       }
     </style>
   </head>
   <body>
     <div id="navbar">
-      <a style="text-decoration-line: none" href=""
+      <a style="text-decoration-line: none" href="subscribe.html"
         ><h1 style="color: orange; font-size: 15px">SUBSCRIBE NOW</h1></a
       >
 
@@ -188,7 +186,7 @@
           ></a>
         </div>
         <div>
-          <a style="color: orange" href=""
+          <a style="color: orange" href="sign.html"
             ><i class="fa-solid fa-circle-user"></i
           ></a>
         </div>
@@ -200,8 +198,10 @@
       </div>
     </div>
 
-    <!-- /* //for main body// */ -->
-    <h1 style="font-family: 'Times New Roman', Times, serif">
+    <!-- body start -->
+    <h1
+      style="font-family: 'Times New Roman', Times, serif; padding-top: 100px"
+    >
       Create An Account
     </h1>
 
@@ -216,33 +216,52 @@
         <input type="text" id="name" />
         <br />
         <label for="">Last Name<span style="color: red">*</span></label>
-        <input type="text" id="name" />
+        <input type="text" id="last_name" />
         <br />
         <label for="">Email<span style="color: red">*</span></label>
         <input type="text" id="email" />
         <br />
         <label for=""> Your Password<span style="color: red">*</span></label>
-        <input type="text" id="password" " />
+        <input type="text" id="password" />
         <br />
-        <button type="submit">Create an Accout</button>
+        <button style="cursor: pointer" type="submit">Create an Accout</button>
         <div id="or" style="height: 0px">
           <hr style="width: 50%; text-align: left; margin-left: 0" />
           <span styel="margin-left:5px;">OR</span>
           <hr style="width: 50%; text-align: left; margin-left: 0" />
         </div>
-        <button type="submit">Sign In</button>
+        <!-- <a href="sign.html"
+          ></a
+        > -->
+        <a style="text-decoration-line: none" href="sign.html">
+          <div
+            style="
+              width: 100%;
+              cursor: pointer;
+              height: 35px;
+              /* border-radius: 8px; */
+              font-size: 15px;
+              background-color: #e5b95f;
+              border: none;
+              color: #2c2727;
 
-        <p></p>
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            Sign In
+          </div>
+        </a>
       </form>
     </div>
-
-    <!-- /* //for main body// */ -->
+    <!-- body end -->
 
     <div id="footer">
       <div id="inner">
-        <div class="info">
+        <div class="des">
           <h3>INFORMATION</h3>
-          <a href=""><p>About Us</p></a>
+          <a href="about.html"><p>About Us</p></a>
           <a href=""><p>Associated Brands</p></a>
           <a href=""><p>FAQ</p></a>
           <a href=""><p>Collaborate with Fab Bag</p></a>
@@ -270,7 +289,7 @@
               type="text"
               placeholder="Your email address"
             />
-            <a href=""
+            <a href="subscribePage.html"
               ><button
                 style="
                   background-color: orange;
@@ -290,7 +309,7 @@
         </div>
       </div>
 
-      <div id="socialmedia">
+      <div id="social">
         <a href="http://facebook.com/fabbag" target="_blank"
           ><i
             style="color: #7d7d7d; width: 2%"
@@ -332,5 +351,24 @@
     } else {
       navbar.classList.remove("sticky");
     }
+  }
+
+  document.querySelector("form").addEventListener("submit", signup);
+
+  function signup() {
+    event.preventDefault();
+    let x = document.querySelector("#name").value;
+    localStorage.setItem("username", x);
+
+    let c = document.querySelector("#last_name").value;
+    localStorage.setItem("username1", x);
+
+    let y = document.querySelector("#email").value;
+    localStorage.setItem("email", y);
+
+    let z = document.querySelector("#password").value;
+    localStorage.setItem("password", z);
+
+    location.href="http://127.0.0.1:5500/cold-throat-6863/sign.html";
   }
 </script>
