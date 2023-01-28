@@ -23,7 +23,7 @@
 
 
 
-<h3 align="center"><a href="dazzling-croissant-c795aa.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://dazzling-croissant-c795aa.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
 <br />
 <p align="center">
   <br />&#10023;
