@@ -64,6 +64,25 @@ This project was built using ReactJs, Chakra UI, HTML, CSS, JavaScript . It is a
 - Visual Studio Code
 
 <br />
+## Glimpses of fabbag-Clone :
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/109049556/222054412-4e017a55-fdf4-464f-81a4-f574e02bc02e.PNG"  alt="home" /></td>
+  </tr>
+  <br/>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/109049556/222054437-69158a98-ee3e-4598-a7f2-8c577edb21c4.PNG"  alt="" /></td>
+  </tr>
+  <br/>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/109049556/222054451-2bdec6a6-bfb0-4e22-b348-9e91d4b5b412.PNG"  alt="" /></td>
+  </tr>
+  <br/>
+
+</table>
+
+<br />
+
 
 ## Contact Us
 
@@ -75,6 +94,7 @@ If you want to contact us, you can reach me through below handles. <br />
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
 
 
 
